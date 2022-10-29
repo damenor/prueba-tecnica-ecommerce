@@ -1,0 +1,17 @@
+@mixin position($top: null, $right: null, $bottom: null, $left: null){
+  @if($top){ top: #{$top + 'rem'}; }
+  @if($right){ right: #{$right + 'rem'}; }
+  @if($bottom){ bottom: #{$bottom + 'rem'}; }
+  @if($left){ left: #{$left + 'rem'}; }
+}
+
+
+@mixin positionAbsolute($top: null, $right: null, $bottom: null, $left: null){
+  position: absolute;
+  @include position($top, $right, $bottom, $left)
+}
+
+@mixin positionFixed($top: null, $right: null, $bottom: null, $left: null){
+  position: fixed;
+  @include position($top, $right, $bottom, $left)
+}
