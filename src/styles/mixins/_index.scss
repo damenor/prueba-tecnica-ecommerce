@@ -1,12 +1,7 @@
+@import './animation';
 @import './flexbox';
 @import './grid';
 @import './position';
 @import './text';
 
-@mixin buttonAnimation ($scale: 0.96){
-  transition: all 0.2s;
-  cursor: pointer;
-  &:active {
-    transform: scale($scale);
-  }
-}
+

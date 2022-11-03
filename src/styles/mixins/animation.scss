@@ -1,0 +1,7 @@
+@mixin buttonAnimation ($scale: 0.9){
+  transition: all 0.2s;
+  cursor: pointer;
+  &:active {
+    transform: scale($scale);
+  }
+}

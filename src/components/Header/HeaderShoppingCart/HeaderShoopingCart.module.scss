@@ -1,0 +1,16 @@
+.shoppingCart {
+  &_withCount {
+    &::before {
+      content: attr(data-content);
+      @include positionAbsolute($bottom: -2px, $right: 0);
+      min-width: 16px;
+      background-color: var(--color-primary);
+      box-sizing: border-box;
+      border-radius: 16px;
+      color: var(--color-primary-contrast);
+      text-align: center;
+      padding: 4px;
+      font-size: 0.6rem;
+    }
+  }
+}

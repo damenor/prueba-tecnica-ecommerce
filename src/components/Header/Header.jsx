@@ -1,19 +1,19 @@
-import { Link } from 'react-router-dom'
+import styles from './header.module.scss'
 
-import './header.scss'
-import ImageLogo from '@/assets/logo.png'
+import { HeaderBreadcrumbs } from './HeaderBreadcrumbs'
+import { HeaderLogo } from './HeaderLogo'
+import { HeaderShoppingCart } from './HeaderShoppingCart'
 
 export const Header = () => {
   return (
-    <header className="header">
-      <div>
-        <Link to="/">
-          <img width="40px" src={ImageLogo} alt="logo" />
-        </Link>
+    <header className={styles.header}>
+      <div className={styles.headerContent}>
+        <HeaderLogo />
+        <div>
+          <HeaderShoppingCart count={0} />
+        </div>
       </div>
-      <nav>
-        <Link to="/product">Products</Link>
-      </nav>
+      <HeaderBreadcrumbs />
     </header>
   )
 }

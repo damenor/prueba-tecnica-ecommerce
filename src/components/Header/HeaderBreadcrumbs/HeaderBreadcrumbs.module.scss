@@ -1,0 +1,15 @@
+.headerBreadcrumbs {
+  @include flex;
+  font-size: 0.9rem;
+  &Link {
+    font-weight: bold;
+    text-decoration: none;
+    &_active {
+      font-weight: normal;
+    }
+  }
+  &Separator {
+    font-weight: bold;
+    margin: 0 8px;
+  }
+}

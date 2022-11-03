@@ -1,4 +1,4 @@
-@mixin flex($direction: row, $x: null, $y: null, $isWrap: true, $gap: null){
+@mixin flex($direction: row, $x: null, $y: null, $isWrap: false, $gap: null){
   display: flex;
   @if($direction == row){
     @if($x) { @include flexJustifyContent($x); }

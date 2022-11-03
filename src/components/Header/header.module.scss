@@ -1,0 +1,11 @@
+.header {
+  @include positionFixed($top: 0, $left: 0);
+  @include flex($direction: column);
+  padding: 8px;
+  height: var(--header-height);
+  width: 100%;
+  backdrop-filter: blur(20px);
+  &Content {
+    @include flex($x: space-between, $y: center);
+  }
+}
