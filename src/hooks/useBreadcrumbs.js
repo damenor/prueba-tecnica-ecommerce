@@ -8,4 +8,7 @@ export const useBreadcrumbs = breadcrumbs => {
   useEffect(() => {
     setBreadcrumbs(breadcrumbs)
   }, [])
+
+  return { setBreadcrumbs }
+
 }

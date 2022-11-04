@@ -1,10 +1,9 @@
-import { AnimatePresence, motion } from 'framer-motion'
+import { motion } from 'framer-motion'
 
 import styles from './ProductList.module.scss'
 
 import { ProductListItem } from './ProductListItem'
 import { ProductListSearch } from './ProductListSearch'
-import { useProducts } from './useProducts'
 
 const variants = {
   hidden: {
@@ -30,9 +29,7 @@ const variantsItem = {
 
 const MotionProductListItem = motion(ProductListItem)
 
-export const ProductList = () => {
-  const { products, filterProducts } = useProducts()
-
+export const ProductList = ({ products, filterProducts }) => {
   return (
     <div className={styles.productList}>
       <ProductListSearch onChange={filterProducts} />

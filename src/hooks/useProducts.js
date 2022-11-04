@@ -5,7 +5,7 @@ import { getApiProducts } from '@/api'
 
 export const useProducts = () => {
   const [products, setProducts] = useState([])
-  const { isLoading, error, data } = useQuery('products', getApiProducts)
+  const { data } = useQuery('products', getApiProducts)
   const filterProducts = searchTerm => {
     if(!data) return
     const productsFiltered = data.filter(product => {
@@ -14,5 +14,5 @@ export const useProducts = () => {
     setProducts(productsFiltered)
   }
   useEffect(() => data && setProducts(data), [data])
-  return { products, isLoading, error, filterProducts }
+  return { products, filterProducts }
 }
