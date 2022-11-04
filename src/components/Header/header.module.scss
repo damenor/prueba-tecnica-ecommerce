@@ -4,7 +4,8 @@
   padding: 8px;
   height: var(--header-height);
   width: 100%;
-  backdrop-filter: blur(20px);
+  backdrop-filter: saturate(100%) blur(40px);
+  z-index: 9;
   &Content {
     @include flex($x: space-between, $y: center);
   }

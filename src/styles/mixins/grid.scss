@@ -4,8 +4,8 @@
   gap: $gap;
   @if($defineMediaQuery) {
     @media screen and (max-width: $mediaQuerySmall) {
-      grid-template-columns: 1fr;
-      gap: 0em;
+      grid-template-columns: repeat(2, 1fr);
+      gap: $gap;
     }
   }
 }

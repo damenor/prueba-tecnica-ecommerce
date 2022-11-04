@@ -1,0 +1,13 @@
+.errorFallback {
+  width: 100vw;
+  height: 100vh;
+  @include flex($direction: column, $x: center, $y: center);
+  color: var(--color-danger-contrast);
+  background-color: var(--color-danger);
+  h2 {
+    font-size: 4rem;
+  }
+  h3 {
+    font-size: 2rem;
+  }
+}
