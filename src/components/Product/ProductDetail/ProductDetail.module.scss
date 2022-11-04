@@ -1,0 +1,59 @@
+.productDetail {
+  @include grid($columns: 2, $gap: 32px, $columnsQuerySmall: 1, $mediaQuerySmall: 768px);
+  padding: 16px;
+  padding-top: 64px;  
+  &Image {
+    padding: 16px;
+    border-radius: 16px;
+    background-color: var(--color-white);
+    display: grid;
+    place-items: center;
+    img {
+      width: 75%;
+    }
+  }
+  &Description {
+    @include flex($direction: column);
+    h2 {
+      color: var(--color-primary);
+      font-size: 2rem;
+    }
+    &ButtonBuy {
+      @include buttonAnimation;
+      color: var(--color-success-contrast);
+      background-color: var(--color-success);
+      border-radius: 8px;
+      font-size: 2rem;
+      padding: 8px 16px;
+      font-weight: bold;
+      text-transform: uppercase;
+      width: 100%;
+    }
+    &Data {
+      flex: 1;
+      padding: 32px;
+    }
+    &Options {
+      &Buttons {
+        padding: 8px 32px;
+      }
+      &Button {
+        color: var(--color-bg-secondary-contrast);
+        background-color: var(--color-bg-secondary);
+        border-radius: 8px;
+        padding: 8px 16px;
+        @include buttonAnimation;
+        &_active {
+          color: var(--color-secondary-contrast);
+          background-color: var(--color-secondary);
+          font-weight: bold;
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+  &RowWithIcon {
+    @include flex($gap: 8px, $y: center);
+    margin-top: 4px;
+  }
+}
