@@ -15,6 +15,7 @@ const appReducer = (state, action) => {
 
 const initialState = {
   breadcrumbs: [],
+  shoppingCartCount: 0,
 }
 
 export const AppProvider = ({ children }) => {

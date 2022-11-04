@@ -14,11 +14,12 @@ export const ProductDetail = ({
   secondaryCamera,
   price,
   selectedOptions,
+  isLoadingShoppingCart,
+  onAddShoppingCart,
   onChangeColor,
   onChangeStorage,
   ...productData
 }) => {
-  console.log({ selectedOptions })
   return (
     <div className={styles.productDetail}>
       <div className={styles.productDetailImage}>
@@ -43,7 +44,13 @@ export const ProductDetail = ({
           codeActive={selectedOptions.color}
           onChangeOption={onChangeColor}
         />
-        <button className={styles.productDetailDescriptionButtonBuy}>Buy for {price}€</button>
+        <button 
+          className={styles.productDetailDescriptionButtonBuy} 
+          onClick={onAddShoppingCart}
+          disabled={isLoadingShoppingCart}
+        >
+          Buy for {price}€
+        </button>
       </div>
     </div>
   )

@@ -1,3 +1,9 @@
+@mixin buttonCommon {
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+}
+
 .productDetail {
   @include grid($columns: 2, $gap: 32px, $columnsQuerySmall: 1, $mediaQuerySmall: 768px);
   padding: 16px;
@@ -22,12 +28,15 @@
       @include buttonAnimation;
       color: var(--color-success-contrast);
       background-color: var(--color-success);
-      border-radius: 8px;
       font-size: 2rem;
-      padding: 8px 16px;
       font-weight: bold;
       text-transform: uppercase;
       width: 100%;
+      @include buttonCommon;
+      &:disabled {
+        color: var(--color-bg-contrast);
+        background-color: var(--color-bg);
+      }
     }
     &Data {
       flex: 1;
@@ -40,8 +49,7 @@
       &Button {
         color: var(--color-bg-secondary-contrast);
         background-color: var(--color-bg-secondary);
-        border-radius: 8px;
-        padding: 8px 16px;
+        @include buttonCommon;
         @include buttonAnimation;
         &_active {
           color: var(--color-secondary-contrast);
